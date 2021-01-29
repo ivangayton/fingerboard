@@ -106,8 +106,14 @@ module radius_guides(){
     translate([0, 0, stringh - radius_nut])
     rotate([0, 90, 0])
     difference(){
-        cylinder(r = radius_nut, h = 10, $fn = 512);
+        cylinder(r = radius_nut, h = 5, $fn = 512);
         translate([0,0,-1]) cylinder(r = radius_nut -0.1, h= 12, $fn = 512);
+    }
+    translate([scale_length * 0.75, 0, stringh - radius_24fret])
+    rotate([0, 90, 0])
+    difference(){
+        cylinder(r = radius_24fret, h = 5, $fn = 512);
+        translate([0,0,-1]) cylinder(r = radius_24fret -0.1, h= 12, $fn = 512);
     }
 }
 
